@@ -3,6 +3,7 @@
 
 #include "brute_force.h"
 #include "dynamic_prog.h"
+#include "greedy.h"
 #include "input.h"
 using namespace std;
 
@@ -19,6 +20,10 @@ int main() {
     }
     else if (approach==1) {
         dynamic_approach(profit, weigth,n,capacity,usedItems);
+    }
+    else if (approach==2) {
+        cout <<n <<endl;
+        greedy_approach(profit, weigth, n,capacity,usedItems);
     }
 
 

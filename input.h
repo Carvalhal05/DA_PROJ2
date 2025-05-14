@@ -12,7 +12,7 @@ void read_input(int& capacity, int& n, vector<unsigned int>& weight, vector<unsi
     cout << "Select the dataset: ";
     int dataset;
     cin >> dataset;
-    cout <<"Select the approach (exaustive:0, dynamic:1): ";
+    cout <<"Select the approach (exaustive:0, dynamic:1, greedy:2): ";
     cin >> approach;
     string csv;
     string csv_1;
