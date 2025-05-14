@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <chrono>
 using namespace std;
 
 
@@ -54,6 +55,9 @@ void exhaustive_approach(const vector<unsigned int>& values,const vector<unsigne
             cout << i+1 << "," << weights[i] << "," << values[i] << endl;
         }
     }
+
+    for (volatile int i = 0; i < 1e8; ++i);
+
 }
 
 #endif //BRUTE_FORCE_H

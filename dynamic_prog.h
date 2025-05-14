@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <vector>
+#include <chrono>
 using namespace std;
 
 void dynamic_approach(const vector<unsigned int>& values, const vector<unsigned int>& weights, unsigned int n, unsigned int maxWeight, vector<bool>& usedItems) {
@@ -83,4 +84,5 @@ void dynamic_approach(const vector<unsigned int>& values, const vector<unsigned 
         }
     }
 
+    for (volatile int i = 0; i < 1e8; ++i);
 }

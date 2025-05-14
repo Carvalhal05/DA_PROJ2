@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <chrono>
 using namespace std;
 
 void greedy_approach(const vector<unsigned int>& values, const vector<unsigned int>& weights, unsigned int n, unsigned int maxWeight, vector<bool>& usedItems) {
@@ -37,7 +38,8 @@ void greedy_approach(const vector<unsigned int>& values, const vector<unsigned i
             cout << i+1 << "," << weights[i] << "," << values[i] << endl;
         }
     }
-}
 
+    for (volatile int i = 0; i < 1e8; ++i);
+}
 
 #endif //GREEDY_H
