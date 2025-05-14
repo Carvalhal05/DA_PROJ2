@@ -53,7 +53,7 @@ void dynamic_approach(const vector<unsigned int>& values, const vector<unsigned 
         }
     }
 
-    if(remainingWeight > 0) {
+    if(remainingWeight >= weights[0] && maxValue[0][remainingWeight] == values[0]) {
         usedItems[0] = true;
     }
 
