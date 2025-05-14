@@ -7,4 +7,5 @@ add_executable(untitled main.cpp
         brute_force.h
         input.h
         dynamic_prog.h
-        greedy.h)
+        greedy.h
+        ilp.h)

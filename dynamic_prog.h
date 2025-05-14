@@ -10,11 +10,17 @@ using namespace std;
 void dynamic_approach(const vector<unsigned int>& values, const vector<unsigned int>& weights, unsigned int n, unsigned int maxWeight, vector<bool>& usedItems) {
     usedItems.assign(n,false);
     vector<vector<unsigned int>> maxValue(n, vector<unsigned int>(maxWeight + 1, 0));
+    vector<vector<unsigned int>> minWeight(n, vector<unsigned int>(maxWeight + 1, 0));
+
     for(unsigned int k = 0; k <= maxWeight; k++) {
         maxValue[0][k] = (k >= weights[0]) ? values[0] : 0;
+        minWeight[0][k] = (k >= weights[0]) ? weights[0] : 0;
     }
+
+
     for(unsigned int i = 1; i < n; i++) {
         maxValue[i][0] = 0;
+        minWeight[i][0] = 0;
     }
 
 
@@ -22,14 +28,28 @@ void dynamic_approach(const vector<unsigned int>& values, const vector<unsigned 
         for(unsigned int k = 1; k <= maxWeight; k++) {
             if(k < weights[i]) {
                 maxValue[i][k] = maxValue[i - 1][k];
+                minWeight[i][k] = minWeight[i - 1][k];
             }
             else {
                 unsigned int valueUsingItemI = maxValue[i - 1][k - weights[i]] + values[i];
                 if(valueUsingItemI > maxValue[i - 1][k]) {
                     maxValue[i][k] = valueUsingItemI;
+                    minWeight[i][k] = minWeight[i - 1][k - weights[i]] + weights[i];
                 }
-                else {
+                else if (valueUsingItemI < maxValue[i - 1][k]){
                     maxValue[i][k] = maxValue[i - 1][k];
+                    minWeight[i][k] = minWeight[i - 1][k];
+                }else {
+                    unsigned int weightWith = minWeight[i - 1][k - weights[i]] + weights[i];
+                    unsigned int weightWithout = minWeight[i - 1][k];
+
+                    if (weightWith < weightWithout) {
+                        maxValue[i][k] = valueUsingItemI;
+                        minWeight[i][k] = weightWith;
+                    } else {
+                        maxValue[i][k] = maxValue[i - 1][k];
+                        minWeight[i][k] = weightWithout;
+                    }
                 }
             }
         }
