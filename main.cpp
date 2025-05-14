@@ -22,7 +22,6 @@ int main() {
         dynamic_approach(profit, weigth,n,capacity,usedItems);
     }
     else if (approach==2) {
-        cout <<n <<endl;
         greedy_approach(profit, weigth, n,capacity,usedItems);
     }
 
