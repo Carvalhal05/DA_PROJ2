@@ -25,6 +25,5 @@ int main() {
         greedy_approach(profit, weigth, n,capacity,usedItems);
     }
 
-
     return 0;
 }

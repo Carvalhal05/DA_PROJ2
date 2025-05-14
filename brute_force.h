@@ -14,14 +14,12 @@ int count_items(vector<bool>& v) {
     return counter;
 }
 
-
-
 void exhaustive_approach(const vector<unsigned int>& values,const vector<unsigned int>& weights, unsigned int n, unsigned int maxWeight, vector<bool>& usedItems) {
     vector<bool> curCandidate(n,false);
     usedItems.assign(n,false);
 
-    bool foundSol = false;
     unsigned int maxValue=0;
+    unsigned int prevWeight = INT_MAX;
     while (true) {
 
         unsigned int totalValue = 0;
@@ -33,14 +31,13 @@ void exhaustive_approach(const vector<unsigned int>& values,const vector<unsigne
             }
         }
         if(totalWeight <= maxWeight) {
-                if(!foundSol || totalValue >= maxValue || (totalValue == maxValue && count_items(curCandidate) < count_items(usedItems))) {
-                    foundSol = true;
+                if(totalValue >= maxValue || (totalValue == maxValue && totalWeight < prevWeight)) {
                     maxValue = totalValue;
+                    prevWeight = totalWeight;
                     usedItems = curCandidate;
 
                 }
         }
-
 
         unsigned int curIndex = 0;
         while(curIndex < n && curCandidate[curIndex]) {
@@ -58,7 +55,5 @@ void exhaustive_approach(const vector<unsigned int>& values,const vector<unsigne
         }
     }
 }
-
-
 
 #endif //BRUTE_FORCE_H
