@@ -1,8 +1,6 @@
 #ifndef DYNAMIC_PROG_H
 #define DYNAMIC_PROG_H
 
-#endif //DYNAMIC_PROG_H
-
 #include <iostream>
 #include <vector>
 #include <chrono>
@@ -60,23 +58,18 @@ void dynamic_approach(const vector<unsigned int>& values, const vector<unsigned 
     for(unsigned int i = 0; i < n; i++) {
         usedItems[i] = false;
     }
-    unsigned int remainingWeight = maxWeight;
-    unsigned int curItem = n - 1;
-    for(unsigned int i = n - 1; i > 0; i--) {
-
-        if(remainingWeight == 0) break;
-
-
-        if(maxValue[i][remainingWeight] != maxValue[i-1][remainingWeight]) {
+    unsigned int k = maxWeight;
+    for (int i = n - 1; i >= 1; --i) {
+        if (k >= weights[i] && maxValue[i][k] == maxValue[i - 1][k - weights[i]] + values[i]) {
             usedItems[i] = true;
-            remainingWeight -= weights[i];
-            curItem--;
+            k -= weights[i];
         }
     }
 
-    if(remainingWeight >= weights[0] && maxValue[0][remainingWeight] == values[0]) {
+    if (k >= weights[0] && maxValue[0][k] == values[0]) {
         usedItems[0] = true;
     }
+
 
     for (int i =0; i<n ; i++) {
         if (usedItems[i]==1) {
@@ -86,3 +79,5 @@ void dynamic_approach(const vector<unsigned int>& values, const vector<unsigned 
 
     for (volatile int i = 0; i < 1e8; ++i);
 }
+
+#endif //DYNAMIC_PROG_H
