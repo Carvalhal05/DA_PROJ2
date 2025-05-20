@@ -8,11 +8,11 @@
 #include <sstream>
 using namespace std;
 
-void read_input(int& capacity, int& n, vector<unsigned int>& weight, vector<unsigned int>& profit, int& approach) {
+int read_input(int& capacity, int& n, vector<unsigned int>& weight, vector<unsigned int>& profit, int& approach) {
     cout << "Select the dataset: ";
     int dataset;
     cin >> dataset;
-    cout <<"Select the approach (exaustive:0, dynamic:1, greedy:2): ";
+    cout <<"Select the approach (exaustive:0, dynamic:1, greedy:2, ILP:3): ";
     cin >> approach;
     string csv;
     string csv_1;
@@ -48,8 +48,9 @@ void read_input(int& capacity, int& n, vector<unsigned int>& weight, vector<unsi
         weight.push_back(stoi(value_1));
         getline(ss_1, value_1, ',');
         profit.push_back(stoi(value_1));
-
     }
+
+    return dataset;
 
 }
 

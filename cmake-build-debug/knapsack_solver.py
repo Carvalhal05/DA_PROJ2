@@ -5,7 +5,7 @@ from pulp import LpProblem, LpMaximize, LpVariable, lpSum
 import sys
 
 
-# Read input from file 
+# Read input from file
 
 with open(sys.argv[1], 'r') as f:
     lines = f.readlines()
@@ -28,8 +28,14 @@ selected = [str(i) for i in range(n) if x[i].varValue > 0.5]
 total_profit = sum(profits[int(i)] for i in selected)
 total_weight = sum(weights[int(i)] for i in selected)
 
-# Write result to output file -- with a system call ---- open(sys.argv[2], 'r') as f 
+# Write result to output file -- with a system call ---- open(sys.argv[2], 'r') as f
 with open(sys.argv[2], 'w') as f:
     f.write(f"{total_profit}\n")
     f.write(f"{total_weight}\n")
-    f.write(" ".join(selected) + "\n")
+    f.write(f"{capacity}\n")
+    f.write(" ".join(str(int(i) + 1) for i in selected) + "\n")
+
+print("Pallets selecionados:")
+for i in selected:
+    idx = int(i)
+    print(f"{idx+1} {weights[idx]} {profits[idx]}")

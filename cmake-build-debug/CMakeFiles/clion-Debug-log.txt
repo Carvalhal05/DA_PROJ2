@@ -1,18 +1,18 @@
-"C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -DPython_EXECUTABLE=C:/Users/magna/Desktop/DA_PROJ2/.venv/Scripts/python.exe -DPython3_EXECUTABLE=C:/Users/magna/Desktop/DA_PROJ2/.venv/Scripts/python.exe -S C:\Users\magna\Desktop\DA_PROJ2 -B C:\Users\magna\Desktop\DA_PROJ2\cmake-build-debug
+"C:\Users\anacc\OneDrive\Portugal\Feup\2 ano\CLion\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" "-DPython_EXECUTABLE=C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/DA_PROJ2/.venv/Scripts/python.exe" "-DPython3_EXECUTABLE=C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/DA_PROJ2/.venv/Scripts/python.exe" -S "C:\Users\anacc\OneDrive\Portugal\Feup\2 ano\DA_PROJ2" -B "C:\Users\anacc\OneDrive\Portugal\Feup\2 ano\DA_PROJ2\cmake-build-debug"
 -- The C compiler identification is GNU 13.1.0
 -- The CXX compiler identification is GNU 13.1.0
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/Program Files/JetBrains/CLion 2024.3.3/bin/mingw/bin/gcc.exe - skipped
+-- Check for working C compiler: C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/mingw/bin/gcc.exe - skipped
 -- Detecting C compile features
 -- Detecting C compile features - done
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: C:/Program Files/JetBrains/CLion 2024.3.3/bin/mingw/bin/g++.exe - skipped
+-- Check for working CXX compiler: C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/mingw/bin/g++.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Configuring done (6.0s)
--- Generating done (0.6s)
+-- Configuring done (9.4s)
+-- Generating done (0.1s)
 CMake Warning:
   Manually-specified variables were not used by the project:
 
@@ -20,4 +20,4 @@ CMake Warning:
     Python_EXECUTABLE
 
 
--- Build files have been written to: C:/Users/magna/Desktop/DA_PROJ2/cmake-build-debug
+-- Build files have been written to: C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/DA_PROJ2/cmake-build-debug
