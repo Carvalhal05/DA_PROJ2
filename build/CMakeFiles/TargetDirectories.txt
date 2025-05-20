@@ -1,0 +1,5 @@
+/Users/jose/Documents/teaching/ProgImp/Prog2425/prog2425_teachers/project/project_to_students/project/build/CMakeFiles/runscrim.dir
+/Users/jose/Documents/teaching/ProgImp/Prog2425/prog2425_teachers/project/project_to_students/project/build/CMakeFiles/tester.dir
+/Users/jose/Documents/teaching/ProgImp/Prog2425/prog2425_teachers/project/project_to_students/project/build/CMakeFiles/delivery.dir
+/Users/jose/Documents/teaching/ProgImp/Prog2425/prog2425_teachers/project/project_to_students/project/build/CMakeFiles/edit_cache.dir
+/Users/jose/Documents/teaching/ProgImp/Prog2425/prog2425_teachers/project/project_to_students/project/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,201 @@
+{
+	"globsDependent" : 
+	[
+		{
+			"expression" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/*.cpp",
+			"paths" : 
+			[
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Color.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/Add.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/Blank.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/Chain.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/Crop.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/Fill.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/H_mirror.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/Invert.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/Move.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/Open.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/Replace.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/Resize.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/Rotate_left.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/Rotate_right.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/Save.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/Scaleup.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/Slide.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/To_gray_scale.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Command/V_mirror.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Image.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Logger.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/PNG.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Scrim.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/ScrimParser.cpp",
+				"C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/src/Utils.cpp"
+			],
+			"recurse" : true
+		}
+	],
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.30.5/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/CLion/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/cmake-build-debug",
+		"source" : "C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 1
+	}
+}
