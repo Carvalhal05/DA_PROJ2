@@ -24,6 +24,7 @@ int count_items(vector<bool>& v) {
  * @param n número de "Pallets"
  * @param maxWeight capacidade máxima do "Truck"
  * @param usedItems vetor que indica quais "Pallets" estão no "Truck"
+ * @complexity O(2^n), onde n é o número de "Pallets"
  */
 void exhaustive_approach(const vector<unsigned int>& values,const vector<unsigned int>& weights, unsigned int n, unsigned int maxWeight, vector<bool>& usedItems) {
     vector<bool> curCandidate(n,false);

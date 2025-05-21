@@ -25,6 +25,8 @@ void print_error() {
 /**
  *@brief Lê qual o dataset escolhido
  *
+ * @return int Retorna o dataset escolhido
+ * @complexity O(1).
  */
 int read_dataset() {
     int dataset;
@@ -52,6 +54,8 @@ int read_dataset() {
 /**
  *@brief Lê com o algoritmo escolhido
  *
+ * @return int Retorna o algoritmo escolhido
+ * @complexity O(1).
  */
 
 int read_approach() {
@@ -88,6 +92,8 @@ int read_approach() {
  * @param weight vetor com o peso de cada "Pallet"
  * @param profit vetor com o valor de cada "Pallet"
  * @param approach algoritmo para resolver o problema
+ *
+ * @complexity O(N), onde N é o número de linhas do ficheiro
  */
 int read_input(int& capacity, int& n, vector<unsigned int>& weight, vector<unsigned int>& profit, int& approach) {
     int dataset;

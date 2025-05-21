@@ -19,6 +19,7 @@ using namespace std;
  * @param n número de "Pallets"
  * @param maxWeight capacidade máxima do "Truck"
  * @param usedItems vetor que indica quais "Pallets" estão no "Truck"
+ * @complexity O(nW), onde n é o número de "Pallets" e w a capcidade do "Truck"
  */
 void dynamic_approach(const vector<unsigned int>& values, const vector<unsigned int>& weights, unsigned int n, unsigned int maxWeight, vector<bool>& usedItems) {
     usedItems.assign(n,false);
