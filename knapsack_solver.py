@@ -1,5 +1,9 @@
 # knapsack_solver.py
 
+"""
+@file knapsack_solver.py
+@brief Script que resolve o problema da mochila usando programação linear com PuLP.
+"""
 
 from pulp import LpProblem, LpMaximize, LpVariable, lpSum
 import sys

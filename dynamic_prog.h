@@ -6,6 +6,15 @@
 #include <chrono>
 using namespace std;
 
+/**
+ *@brief
+ *
+ * @param values
+ * @param weights
+ * @param n
+ * @param maxWeight
+ * @param usedItems
+ */
 void dynamic_approach(const vector<unsigned int>& values, const vector<unsigned int>& weights, unsigned int n, unsigned int maxWeight, vector<bool>& usedItems) {
     usedItems.assign(n,false);
     vector<vector<unsigned int>> maxValue(n, vector<unsigned int>(maxWeight + 1, 0));

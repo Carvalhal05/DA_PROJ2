@@ -7,6 +7,12 @@
 using namespace std;
 
 
+/**
+ *@brief
+ *
+ * @param v
+ * @return
+ */
 int count_items(vector<bool>& v) {
     int counter =0;
     for (int i=0 ; i<v.size() ; i++) {
@@ -15,6 +21,16 @@ int count_items(vector<bool>& v) {
     return counter;
 }
 
+
+/**
+ *@brief
+ *
+ * @param values
+ * @param weights
+ * @param n
+ * @param maxWeight
+ * @param usedItems
+ */
 void exhaustive_approach(const vector<unsigned int>& values,const vector<unsigned int>& weights, unsigned int n, unsigned int maxWeight, vector<bool>& usedItems) {
     vector<bool> curCandidate(n,false);
     usedItems.assign(n,false);
