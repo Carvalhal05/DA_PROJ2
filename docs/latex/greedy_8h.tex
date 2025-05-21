@@ -1,0 +1,40 @@
+\doxysection{C\+:/\+Users/magna/\+Desktop/\+DA\+\_\+\+PROJ2/greedy.h File Reference}
+\hypertarget{greedy_8h}{}\label{greedy_8h}\index{C:/Users/magna/Desktop/DA\_PROJ2/greedy.h@{C:/Users/magna/Desktop/DA\_PROJ2/greedy.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{greedy_8h_a95701dae47069cab5a47ec5b01d2b56c}{greedy\+\_\+approach}} (const vector$<$ unsigned int $>$ \&values, const vector$<$ unsigned int $>$ \&weights, unsigned int n, unsigned int max\+Weight, vector$<$ bool $>$ \&used\+Items)
+\begin{DoxyCompactList}\small\item\em Resolve uma versão do problema Knapsack com um algoritmo de aproximação greedy. Com este método, o algoritmo ordena as “\+Pallets” de acordo com o seu rácio (valor/peso). Depois, ele tenta colocar os “\+Pallets” no “\+Truck” -\/se não exceder a capacidade máxima-\/por ordem decrescente de razão. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{greedy_8h_a95701dae47069cab5a47ec5b01d2b56c}\index{greedy.h@{greedy.h}!greedy\_approach@{greedy\_approach}}
+\index{greedy\_approach@{greedy\_approach}!greedy.h@{greedy.h}}
+\doxysubsubsection{\texorpdfstring{greedy\_approach()}{greedy\_approach()}}
+{\footnotesize\ttfamily \label{greedy_8h_a95701dae47069cab5a47ec5b01d2b56c} 
+void greedy\+\_\+approach (\begin{DoxyParamCaption}\item[{const vector$<$ unsigned int $>$ \&}]{values}{, }\item[{const vector$<$ unsigned int $>$ \&}]{weights}{, }\item[{unsigned int}]{n}{, }\item[{unsigned int}]{max\+Weight}{, }\item[{vector$<$ bool $>$ \&}]{used\+Items}{}\end{DoxyParamCaption})}
+
+
+
+Resolve uma versão do problema Knapsack com um algoritmo de aproximação greedy. Com este método, o algoritmo ordena as “\+Pallets” de acordo com o seu rácio (valor/peso). Depois, ele tenta colocar os “\+Pallets” no “\+Truck” -\/se não exceder a capacidade máxima-\/por ordem decrescente de razão. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & vetor com o valor de cada "{}\+Pallet"{} \\
+\hline
+{\em weights} & vetor com o peso de cada "{}\+Pallet"{} \\
+\hline
+{\em n} & número de "{}\+Pallets"{} \\
+\hline
+{\em max\+Weight} & capacidade máxima do "{}\+Truck"{} \\
+\hline
+{\em used\+Items} & vetor que indica quais "{}\+Pallets"{} estão no "{}\+Truck"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexidade\+: O(nlogn), onde n é o número de "{}\+Pallets"{} 
+\end{DoxyNote}

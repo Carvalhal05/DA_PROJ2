@@ -1,0 +1,119 @@
+\doxysection{C\+:/\+Users/magna/\+Desktop/\+DA\+\_\+\+PROJ2/input.h}
+\hypertarget{input_8h_source}{}\label{input_8h_source}\mbox{\hyperlink{input_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INPUT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INPUT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input_8h_a9a730e84612c38a637f04bf983e4f0b4}{print\_error}}()\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Error:\ Please\ insert\ a\ valid\ option."{}}\ <<\ endl;}
+\DoxyCodeLine{00021\ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{input_8h_a271285f7a5d90b86fdfda2a8c369e8e8}{read\_dataset}}()\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ dataset;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ cout\ <<\textcolor{stringliteral}{"{}Dataset:"{}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ cin\ >>\ dataset;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cin.fail())\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ a\ entrada\ não\ for\ um\ número\ inteiro\ válido}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ cin.clear();\ \textcolor{comment}{//\ limpa\ o\ erro}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ cin.ignore(numeric\_limits<streamsize>::max(),\ \textcolor{charliteral}{'\(\backslash\)n'});\ \textcolor{comment}{//\ Descarta\ a\ entrada\ inválida}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{input_8h_a9a730e84612c38a637f04bf983e4f0b4}{print\_error}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dataset\ >\ 0\ \&\&\ dataset\ <=\ 10)\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dataset;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{input_8h_a9a730e84612c38a637f04bf983e4f0b4}{print\_error}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{input_8h_ad89d37ac5f3e84cbff22038424dff59b}{read\_approach}}()\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ approach;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{00064\ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ cout\ <<\textcolor{stringliteral}{"{}Select\ the\ approach\ (exaustive:0,\ dynamic:1,\ greedy:2,\ ILP:3):"{}};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ cin\ >>\ approach;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cin.fail())\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ a\ entrada\ não\ for\ um\ número\ inteiro\ válido}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ cin.clear();\ \textcolor{comment}{//\ limpa\ o\ erro}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ cin.ignore(numeric\_limits<streamsize>::max(),\ \textcolor{charliteral}{'\(\backslash\)n'});\ \textcolor{comment}{//\ Descarta\ a\ entrada\ inválida}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{input_8h_a9a730e84612c38a637f04bf983e4f0b4}{print\_error}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (approach\ >=\ 0\ \&\&\ approach\ <=\ 3)\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ approach;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{input_8h_a9a730e84612c38a637f04bf983e4f0b4}{print\_error}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00098\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{input_8h_a1956e87fc308b7d0b8f941da3b1705f7}{read\_input}}(\textcolor{keywordtype}{int}\&\ capacity,\ \textcolor{keywordtype}{int}\&\ n,\ vector<unsigned\ int>\&\ weight,\ vector<unsigned\ int>\&\ profit,\ \textcolor{keywordtype}{int}\&\ approach)\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{int}\ dataset;}
+\DoxyCodeLine{00100\ \ \ \ \ dataset\ =\ \mbox{\hyperlink{input_8h_a271285f7a5d90b86fdfda2a8c369e8e8}{read\_dataset}}();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ approach\ =\ \mbox{\hyperlink{input_8h_ad89d37ac5f3e84cbff22038424dff59b}{read\_approach}}();}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{string}\ csv;}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{string}\ csv\_1;}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordflow}{if}\ (dataset\ <\ 10)\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ csv\ =\ \textcolor{stringliteral}{"{}TruckandPallets\_0"{}}\ +\ to\_string(dataset)\ +\ \textcolor{stringliteral}{"{}.csv"{}};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ csv\_1\ =\ \textcolor{stringliteral}{"{}Pallets\_0"{}}\ +\ to\_string(dataset)\ +\ \textcolor{stringliteral}{"{}.csv"{}};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ csv\ =\ \textcolor{stringliteral}{"{}TruckandPallets\_"{}}\ +\ to\_string(dataset)\ +\ \textcolor{stringliteral}{"{}.csv"{}};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ csv\_1\ =\ \textcolor{stringliteral}{"{}Pallets\_"{}}\ +\ to\_string(dataset)\ +\ \textcolor{stringliteral}{"{}.csv"{}};}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+\DoxyCodeLine{00114\ \ \ \ \ ifstream\ file\_t(csv);}
+\DoxyCodeLine{00115\ \ \ \ \ ifstream\ file\_p(csv\_1);}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{string}\ line;}
+\DoxyCodeLine{00117\ \ \ \ \ getline(file\_t,line);}
+\DoxyCodeLine{00118\ \ \ \ \ getline(file\_t,line);}
+\DoxyCodeLine{00119\ \ \ \ \ stringstream\ ss(line);}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{string}\ value;}
+\DoxyCodeLine{00121\ \ \ \ \ getline(ss,\ value,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{00122\ \ \ \ \ capacity\ =\ stoi(value);}
+\DoxyCodeLine{00123\ \ \ \ \ getline(ss,\ value,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{00124\ \ \ \ \ n\ =\ stoi(value);}
+\DoxyCodeLine{00125\ \ \ \ \ getline(file\_p,line);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n\ ;\ i++)\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ getline(file\_p,line);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ stringstream\ ss\_1(line);}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ value\_1;}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ getline(ss\_1,\ value\_1,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ getline(ss\_1,\ value\_1,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ weight.push\_back(stoi(value\_1));}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ getline(ss\_1,\ value\_1,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ profit.push\_back(stoi(value\_1));}
+\DoxyCodeLine{00137\ \ \ \ \ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordflow}{return}\ dataset;}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//INPUT\_H}}
+
+\end{DoxyCode}

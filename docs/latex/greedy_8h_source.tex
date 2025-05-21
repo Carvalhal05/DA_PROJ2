@@ -1,0 +1,52 @@
+\doxysection{C\+:/\+Users/magna/\+Desktop/\+DA\+\_\+\+PROJ2/greedy.h}
+\hypertarget{greedy_8h_source}{}\label{greedy_8h_source}\mbox{\hyperlink{greedy_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GREEDY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GREEDY\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{greedy_8h_a95701dae47069cab5a47ec5b01d2b56c}{greedy\_approach}}(\textcolor{keyword}{const}\ vector<unsigned\ int>\&\ values,\ \textcolor{keyword}{const}\ vector<unsigned\ int>\&\ weights,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ n,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ maxWeight,\ vector<bool>\&\ usedItems)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ usedItems.assign(n,\textcolor{keyword}{false});}
+\DoxyCodeLine{00026\ \ \ \ \ vector<pair<double,int>>\ P;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ ratio\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(weights[i])\ /\ values[i];}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ P.push\_back(\{ratio,i\});}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ sort(P.begin(),\ P.end());}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ maxValue\ =\ 0;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ totalWeight\ =\ 0;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ idx\ =\ P[i].second;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (totalWeight\ +\ weights[idx]\ <=\ maxWeight)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ totalWeight\ +=\ weights[idx];}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ maxValue\ +=\ values[idx];}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ usedItems[idx]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =0;\ i<n\ ;\ i++)\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (usedItems[i]==1)\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ i+1\ <<\ \textcolor{stringliteral}{"{},"{}}\ <<\ weights[i]\ <<\ \textcolor{stringliteral}{"{},"{}}\ <<\ values[i]\ <<\ endl;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{volatile}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 1e8;\ ++i);}
+\DoxyCodeLine{00057\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//GREEDY\_H}}
+
+\end{DoxyCode}

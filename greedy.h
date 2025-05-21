@@ -9,16 +9,16 @@ using namespace std;
 
 
 /**
- *@brief Resolve uma versão do problema Knapsack com um algoritmo de aproximação greedy
+ *@brief Resolve uma versão do problema Knapsack com um algoritmo de aproximação greedy.
  *Com este método, o algoritmo ordena as “Pallets” de acordo com o seu rácio (valor/peso).
  *Depois, ele tenta colocar os “Pallets” no “Truck” -se não exceder a capacidade máxima-por ordem decrescente de razão.
  *
- * @param values vetor com o avlor de cada "Pallet"
+ * @param values vetor com o valor de cada "Pallet"
  * @param weights vetor com o peso de cada "Pallet"
  * @param n número de "Pallets"
  * @param maxWeight capacidade máxima do "Truck"
  * @param usedItems vetor que indica quais "Pallets" estão no "Truck"
- * @complexity O(nlogn), onde n é o número de "Pallets"
+ * @note Complexidade: O(nlogn), onde n é o número de "Pallets"
  */
 
 void greedy_approach(const vector<unsigned int>& values, const vector<unsigned int>& weights, unsigned int n, unsigned int maxWeight, vector<bool>& usedItems) {

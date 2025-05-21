@@ -1,0 +1,72 @@
+\doxysection{C\+:/\+Users/magna/\+Desktop/\+DA\+\_\+\+PROJ2/ilp.h}
+\hypertarget{ilp_8h_source}{}\label{ilp_8h_source}\mbox{\hyperlink{ilp_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ILP\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ILP\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ilp_8h_a45ea58ae0a71024a88fe0d7fa6f88c20}{read\_knapsack\_solver}}(\textcolor{keywordtype}{int}\ dataset)}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{string}\ txt;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{if}\ (dataset\ <\ 10)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ txt\ =\ \textcolor{stringliteral}{"{}input0"{}}\ +\ to\_string(dataset)\ +\ \textcolor{stringliteral}{"{}.txt"{}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ txt\ =\ \textcolor{stringliteral}{"{}input"{}}\ +\ to\_string(dataset)\ +\ \textcolor{stringliteral}{"{}.txt"{}};}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Run\ Python\ script\ (must\ be\ .py)}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{string}\ command\ =\ \textcolor{stringliteral}{"{}python\ knapsack\_solver.py\ "{}}\ +\ txt\ +\ \textcolor{stringliteral}{"{}\ output.txt"{}};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ ret\ =\ system(command.c\_str());}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{if}\ (ret\ !=\ 0)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ run\ knapsack\_solver.py"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ Open\ output.txt}}
+\DoxyCodeLine{00040\ \ \ \ \ std::ifstream\ infile(\textcolor{stringliteral}{"{}output.txt"{}});}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (!infile.is\_open())\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Error\ opening\ output.txt"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ totalProfit,\ totalWeight,\ totalCapacity;}
+\DoxyCodeLine{00047\ \ \ \ \ std::string\ line;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ std::getline(infile,\ line);}
+\DoxyCodeLine{00050\ \ \ \ \ totalProfit\ =\ std::stoi(line);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ std::getline(infile,\ line);}
+\DoxyCodeLine{00053\ \ \ \ \ totalWeight\ =\ std::stoi(line);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ std::getline(infile,\ line);}
+\DoxyCodeLine{00056\ \ \ \ \ totalCapacity\ =\ std::stoi(line);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ std::getline(infile,\ line);}
+\DoxyCodeLine{00059\ \ \ \ \ std::istringstream\ iss(line);}
+\DoxyCodeLine{00060\ \ \ \ \ std::vector<int>\ selectedIndices;}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ index;}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{while}\ (iss\ >>\ index)\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ selectedIndices.push\_back(index);}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ infile.close();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ Print\ results}}
+\DoxyCodeLine{00069\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}===\ Knapsack\ Results\ (Python\ ILP)\ ==="{}}\ <<\ std::endl;}
+\DoxyCodeLine{00070\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Total\ Profit:\ "{}}\ <<\ totalProfit\ <<\ std::endl;}
+\DoxyCodeLine{00071\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Total\ Weight:\ "{}}\ <<\ totalWeight\ <<\ std::endl;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00074\ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ILP\_H}}
+
+\end{DoxyCode}

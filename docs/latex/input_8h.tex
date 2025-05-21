@@ -1,0 +1,89 @@
+\doxysection{C\+:/\+Users/magna/\+Desktop/\+DA\+\_\+\+PROJ2/input.h File Reference}
+\hypertarget{input_8h}{}\label{input_8h}\index{C:/Users/magna/Desktop/DA\_PROJ2/input.h@{C:/Users/magna/Desktop/DA\_PROJ2/input.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{input_8h_a9a730e84612c38a637f04bf983e4f0b4}{print\+\_\+error}} ()
+\begin{DoxyCompactList}\small\item\em Imprime uma mensagem de erro. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{input_8h_a271285f7a5d90b86fdfda2a8c369e8e8}{read\+\_\+dataset}} ()
+\begin{DoxyCompactList}\small\item\em Lê qual o dataset escolhido. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{input_8h_ad89d37ac5f3e84cbff22038424dff59b}{read\+\_\+approach}} ()
+\begin{DoxyCompactList}\small\item\em Lê com o algoritmo escolhido. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{input_8h_a1956e87fc308b7d0b8f941da3b1705f7}{read\+\_\+input}} (int \&capacity, int \&n, vector$<$ unsigned int $>$ \&weight, vector$<$ unsigned int $>$ \&profit, int \&approach)
+\begin{DoxyCompactList}\small\item\em Lê o input dos ficheiros correspondentes ao dataset escolhido. Completa os vetores e as variáveis com os valores lidos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{input_8h_a9a730e84612c38a637f04bf983e4f0b4}\index{input.h@{input.h}!print\_error@{print\_error}}
+\index{print\_error@{print\_error}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{print\_error()}{print\_error()}}
+{\footnotesize\ttfamily \label{input_8h_a9a730e84612c38a637f04bf983e4f0b4} 
+void print\+\_\+error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Imprime uma mensagem de erro. 
+
+\Hypertarget{input_8h_ad89d37ac5f3e84cbff22038424dff59b}\index{input.h@{input.h}!read\_approach@{read\_approach}}
+\index{read\_approach@{read\_approach}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{read\_approach()}{read\_approach()}}
+{\footnotesize\ttfamily \label{input_8h_ad89d37ac5f3e84cbff22038424dff59b} 
+int read\+\_\+approach (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lê com o algoritmo escolhido. 
+
+\begin{DoxyReturn}{Returns}
+int Retorna o algoritmo escolhido 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Complexidade\+: O(1). 
+\end{DoxyNote}
+\Hypertarget{input_8h_a271285f7a5d90b86fdfda2a8c369e8e8}\index{input.h@{input.h}!read\_dataset@{read\_dataset}}
+\index{read\_dataset@{read\_dataset}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{read\_dataset()}{read\_dataset()}}
+{\footnotesize\ttfamily \label{input_8h_a271285f7a5d90b86fdfda2a8c369e8e8} 
+int read\+\_\+dataset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lê qual o dataset escolhido. 
+
+\begin{DoxyReturn}{Returns}
+int Retorna o dataset escolhido 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Complexidade\+: O(1). 
+\end{DoxyNote}
+\Hypertarget{input_8h_a1956e87fc308b7d0b8f941da3b1705f7}\index{input.h@{input.h}!read\_input@{read\_input}}
+\index{read\_input@{read\_input}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{read\_input()}{read\_input()}}
+{\footnotesize\ttfamily \label{input_8h_a1956e87fc308b7d0b8f941da3b1705f7} 
+int read\+\_\+input (\begin{DoxyParamCaption}\item[{int \&}]{capacity}{, }\item[{int \&}]{n}{, }\item[{vector$<$ unsigned int $>$ \&}]{weight}{, }\item[{vector$<$ unsigned int $>$ \&}]{profit}{, }\item[{int \&}]{approach}{}\end{DoxyParamCaption})}
+
+
+
+Lê o input dos ficheiros correspondentes ao dataset escolhido. Completa os vetores e as variáveis com os valores lidos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & capacidade máxima do "{}\+Truck"{} \\
+\hline
+{\em n} & número de "{}\+Pallets"{} \\
+\hline
+{\em weight} & vetor com o peso de cada "{}\+Pallet"{} \\
+\hline
+{\em profit} & vetor com o valor de cada "{}\+Pallet"{} \\
+\hline
+{\em approach} & algoritmo para resolver o problema\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexidade\+: O(\+N), onde N é o número de linhas do ficheiro. 
+\end{DoxyNote}

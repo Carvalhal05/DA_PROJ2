@@ -1,0 +1,47 @@
+\doxysection{C\+:/\+Users/magna/\+Desktop/\+DA\+\_\+\+PROJ2/brute\+\_\+force.h File Reference}
+\hypertarget{brute__force_8h}{}\label{brute__force_8h}\index{C:/Users/magna/Desktop/DA\_PROJ2/brute\_force.h@{C:/Users/magna/Desktop/DA\_PROJ2/brute\_force.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{brute__force_8h_aa698c1c0a6bbb1aaeaf523b731c72316}{count\+\_\+items}} (vector$<$ bool $>$ \&v)
+\item 
+void \mbox{\hyperlink{brute__force_8h_a14dc115506fdd659a85a741de77e8712}{exhaustive\+\_\+approach}} (const vector$<$ unsigned int $>$ \&values, const vector$<$ unsigned int $>$ \&weights, unsigned int n, unsigned int max\+Weight, vector$<$ bool $>$ \&used\+Items)
+\begin{DoxyCompactList}\small\item\em Resolve uma versão do problema Knapsack com brute force. Com este método, o algoritmo testa todas as combinações possíveis de “\+Pallets”, verificando para cada uma a restrição de peso e o seu valor. Depois de avaliar todas as combinações, escolhe a melhor opção. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{brute__force_8h_aa698c1c0a6bbb1aaeaf523b731c72316}\index{brute\_force.h@{brute\_force.h}!count\_items@{count\_items}}
+\index{count\_items@{count\_items}!brute\_force.h@{brute\_force.h}}
+\doxysubsubsection{\texorpdfstring{count\_items()}{count\_items()}}
+{\footnotesize\ttfamily \label{brute__force_8h_aa698c1c0a6bbb1aaeaf523b731c72316} 
+int count\+\_\+items (\begin{DoxyParamCaption}\item[{vector$<$ bool $>$ \&}]{v}{}\end{DoxyParamCaption})}
+
+\Hypertarget{brute__force_8h_a14dc115506fdd659a85a741de77e8712}\index{brute\_force.h@{brute\_force.h}!exhaustive\_approach@{exhaustive\_approach}}
+\index{exhaustive\_approach@{exhaustive\_approach}!brute\_force.h@{brute\_force.h}}
+\doxysubsubsection{\texorpdfstring{exhaustive\_approach()}{exhaustive\_approach()}}
+{\footnotesize\ttfamily \label{brute__force_8h_a14dc115506fdd659a85a741de77e8712} 
+void exhaustive\+\_\+approach (\begin{DoxyParamCaption}\item[{const vector$<$ unsigned int $>$ \&}]{values}{, }\item[{const vector$<$ unsigned int $>$ \&}]{weights}{, }\item[{unsigned int}]{n}{, }\item[{unsigned int}]{max\+Weight}{, }\item[{vector$<$ bool $>$ \&}]{used\+Items}{}\end{DoxyParamCaption})}
+
+
+
+Resolve uma versão do problema Knapsack com brute force. Com este método, o algoritmo testa todas as combinações possíveis de “\+Pallets”, verificando para cada uma a restrição de peso e o seu valor. Depois de avaliar todas as combinações, escolhe a melhor opção. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & vetor com o valor de cada "{}\+Pallet"{} \\
+\hline
+{\em weights} & vetor com o peso de cada "{}\+Pallet"{} \\
+\hline
+{\em n} & número de "{}\+Pallets"{} \\
+\hline
+{\em max\+Weight} & capacidade máxima do "{}\+Truck"{} \\
+\hline
+{\em used\+Items} & vetor que indica quais "{}\+Pallets"{} estão no "{}\+Truck"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexidade\+: O(2\texorpdfstring{$^\wedge$}{\string^}n), onde n é o número de "{}\+Pallets"{}. 
+\end{DoxyNote}

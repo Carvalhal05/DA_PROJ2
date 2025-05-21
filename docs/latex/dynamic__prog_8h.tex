@@ -1,0 +1,41 @@
+\doxysection{C\+:/\+Users/magna/\+Desktop/\+DA\+\_\+\+PROJ2/dynamic\+\_\+prog.h File Reference}
+\hypertarget{dynamic__prog_8h}{}\label{dynamic__prog_8h}\index{C:/Users/magna/Desktop/DA\_PROJ2/dynamic\_prog.h@{C:/Users/magna/Desktop/DA\_PROJ2/dynamic\_prog.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dynamic__prog_8h_afc9e89ef5cb60940cb20b6e8d518f41f}{dynamic\+\_\+approach}} (const vector$<$ unsigned int $>$ \&values, const vector$<$ unsigned int $>$ \&weights, unsigned int n, unsigned int max\+Weight, vector$<$ bool $>$ \&used\+Items)
+\begin{DoxyCompactList}\small\item\em Resolve uma versão do problema Knapsack com programação dinâmica. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dynamic__prog_8h_afc9e89ef5cb60940cb20b6e8d518f41f}\index{dynamic\_prog.h@{dynamic\_prog.h}!dynamic\_approach@{dynamic\_approach}}
+\index{dynamic\_approach@{dynamic\_approach}!dynamic\_prog.h@{dynamic\_prog.h}}
+\doxysubsubsection{\texorpdfstring{dynamic\_approach()}{dynamic\_approach()}}
+{\footnotesize\ttfamily \label{dynamic__prog_8h_afc9e89ef5cb60940cb20b6e8d518f41f} 
+void dynamic\+\_\+approach (\begin{DoxyParamCaption}\item[{const vector$<$ unsigned int $>$ \&}]{values}{, }\item[{const vector$<$ unsigned int $>$ \&}]{weights}{, }\item[{unsigned int}]{n}{, }\item[{unsigned int}]{max\+Weight}{, }\item[{vector$<$ bool $>$ \&}]{used\+Items}{}\end{DoxyParamCaption})}
+
+
+
+Resolve uma versão do problema Knapsack com programação dinâmica. 
+
+Com programação dinâmica, o algoritmo guarda numa tabela as soluções parciais ótimas de etapas anteriores, para calcular soluções ótimas de etapas posteriores. Primeiro,completamos os casos base da tabela e depois, para cada “\+Pallet”, verificamos se é melhor colocá-\/la ou não no “\+Truck.
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & vetor com o valor de cada "{}\+Pallet"{} \\
+\hline
+{\em weights} & vetor com o peso de cada "{}\+Pallet"{} \\
+\hline
+{\em n} & número de "{}\+Pallets"{} \\
+\hline
+{\em max\+Weight} & capacidade máxima do "{}\+Truck"{} \\
+\hline
+{\em used\+Items} & vetor que indica quais "{}\+Pallets"{} estão no "{}\+Truck"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexidade\+: O(n\+W), onde n é o número de "{}\+Pallets"{} e w a capcidade do "{}\+Truck"{}. 
+\end{DoxyNote}

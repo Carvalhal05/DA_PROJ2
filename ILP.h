@@ -9,13 +9,13 @@ using namespace std;
 
 
 /**
- *@brief Resolve uma versão do problema Knapsack considerando-o um problema linear inteiro
+ *@brief Resolve uma versão do problema Knapsack considerando-o um problema linear inteiro.
  *Completa os vetores e as variáveis com os valores lidos.
  *
  *
  * @param dataset dataset escolhida
  *
- * @complexity O(2^n), onde n é o númeor de "Pallets"
+ * @note Complexidade: O(2^n), onde n é o númeor de "Pallets".
  */
 
 int read_knapsack_solver(int dataset)
