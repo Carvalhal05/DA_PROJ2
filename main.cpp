@@ -8,6 +8,17 @@
 #include "ILP.h"
 using namespace std;
 
+
+
+/**
+ * @file main.cpp
+ * @brief Arquivo principal do programa.
+ */
+
+/**
+ * @brief Função principal.
+ */
+
 int main() {
 
     int n;

@@ -8,10 +8,24 @@
 #include <sstream>
 using namespace std;
 
+
+
+
+/**
+ *@brief Imprime uma mensagem de erro
+ *
+ */
+
 void print_error() {
     cout << "Error: Please insert a valid option." << endl;
 }
 
+
+
+/**
+ *@brief Lê qual o dataset escolhido
+ *
+ */
 int read_dataset() {
     int dataset;
     while (true)
@@ -33,6 +47,12 @@ int read_dataset() {
         print_error();
     }
 }
+
+
+/**
+ *@brief Lê com o algoritmo escolhido
+ *
+ */
 
 int read_approach() {
     int approach;
@@ -56,6 +76,19 @@ int read_approach() {
     }
 }
 
+
+
+/**
+ *@brief Lê o input dos ficheiros correspondentes ao dataset escolhido
+ *Completa os vetores e as variáveis com os valores lidos.
+ *
+ *
+ * @param capacity capacidade máxima do "Truck"
+ * @param n número de "Pallets"
+ * @param weight vetor com o peso de cada "Pallet"
+ * @param profit vetor com o valor de cada "Pallet"
+ * @param approach algoritmo para resolver o problema
+ */
 int read_input(int& capacity, int& n, vector<unsigned int>& weight, vector<unsigned int>& profit, int& approach) {
     int dataset;
     dataset = read_dataset();

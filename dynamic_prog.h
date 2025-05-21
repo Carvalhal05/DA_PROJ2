@@ -6,6 +6,20 @@
 #include <chrono>
 using namespace std;
 
+
+
+/**
+ *@brief Resolve uma versão do problema Knapsack com programação dinâmica
+ *
+ *Com programação dinâmica, o algoritmo guarda numa tabela as soluções parciais ótimas de etapas anteriores, para calcular soluções ótimas de etapas posteriores.
+ *Primeiro,completamos os casos base da tabela e depois, para cada “Pallet”, verificamos se é melhor colocá-la ou não no “Truck.
+
+ * @param values vetor com o avlor de cada "Pallet"
+ * @param weights vetor com o peso de cada "Pallet"
+ * @param n número de "Pallets"
+ * @param maxWeight capacidade máxima do "Truck"
+ * @param usedItems vetor que indica quais "Pallets" estão no "Truck"
+ */
 void dynamic_approach(const vector<unsigned int>& values, const vector<unsigned int>& weights, unsigned int n, unsigned int maxWeight, vector<bool>& usedItems) {
     usedItems.assign(n,false);
     vector<vector<unsigned int>> maxValue(n, vector<unsigned int>(maxWeight + 1, 0));
