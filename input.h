@@ -8,12 +8,59 @@
 #include <sstream>
 using namespace std;
 
-int read_input(int& capacity, int& n, vector<unsigned int>& weight, vector<unsigned int>& profit, int& approach) {
-    cout << "Select the dataset: ";
+void print_error() {
+    cout << "Error: Please insert a valid option." << endl;
+}
+
+int read_dataset() {
     int dataset;
-    cin >> dataset;
-    cout <<"Select the approach (exaustive:0, dynamic:1, greedy:2, ILP:3): ";
-    cin >> approach;
+    while (true)
+    {
+        cout <<"Dataset:";
+        cin >> dataset;
+        if (cin.fail()) {
+            // Se a entrada não for um número inteiro válido
+            cin.clear(); // limpa o erro
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Descarta a entrada inválida
+            print_error();
+            continue;
+        }
+
+        if (dataset > 0 && dataset <= 10) {
+            return dataset;
+        }
+
+        print_error();
+    }
+}
+
+int read_approach() {
+    int approach;
+    while (true)
+    {
+        cout <<"Select the approach (exaustive:0, dynamic:1, greedy:2, ILP:3):";
+        cin >> approach;
+        if (cin.fail()) {
+            // Se a entrada não for um número inteiro válido
+            cin.clear(); // limpa o erro
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Descarta a entrada inválida
+            print_error();
+            continue;
+        }
+
+        if (approach >= 0 && approach <= 3) {
+            return approach;
+        }
+
+        print_error();
+    }
+}
+
+int read_input(int& capacity, int& n, vector<unsigned int>& weight, vector<unsigned int>& profit, int& approach) {
+    int dataset;
+    dataset = read_dataset();
+
+    approach = read_approach();
     string csv;
     string csv_1;
     if (dataset < 10) {

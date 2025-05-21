@@ -3,9 +3,12 @@
 
 from pulp import LpProblem, LpMaximize, LpVariable, lpSum
 import sys
+import time
+
 
 
 # Read input from file
+start_time = time.time()
 
 with open(sys.argv[1], 'r') as f:
     lines = f.readlines()
@@ -34,8 +37,9 @@ with open(sys.argv[2], 'w') as f:
     f.write(f"{total_weight}\n")
     f.write(f"{capacity}\n")
     f.write(" ".join(str(int(i) + 1) for i in selected) + "\n")
-
+end_time = time.time()
 print("Pallets selecionados:")
 for i in selected:
     idx = int(i)
     print(f"{idx+1} {weights[idx]} {profits[idx]}")
+print(f"Tempo de execução: {(end_time - start_time) * 1000:.2f} ms")

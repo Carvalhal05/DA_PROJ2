@@ -134,7 +134,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "ilp.h",
+			"path" : "ILP.h",
 			"sourceGroupIndex" : 1
 		}
 	],

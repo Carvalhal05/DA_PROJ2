@@ -35,7 +35,10 @@ int main() {
         auto stop3 = chrono::high_resolution_clock::now();
         cout << "Time: " << chrono::duration_cast<chrono::milliseconds>(stop3 - start3).count() << " ms" << endl;
     } else if (approach==3) {
+        auto start4 = chrono::high_resolution_clock::now();
         read_knapsack_solver(dataset);
+        auto stop4 = chrono::high_resolution_clock::now();
+        cout << "Time: " << chrono::duration_cast<chrono::milliseconds>(stop4 - start4).count() << " ms" << endl;
     }
 
 
