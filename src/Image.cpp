@@ -25,7 +25,7 @@ namespace prog {
     {
         //X->Largura Y-> altura (Ver Figura 2).
         if (x < 0 || x >= W || y < 0 || y >= H){ //Fora dos limites da imagem.
-            exit (EXIT_FAILURE); //Ver se pode https://cplusplus.com/reference/cstdlib/exit/.
+            exit (EXIT_FAILURE); //https://cplusplus.com/reference/cstdlib/exit/.
         }
         return pixel[y][x]; //Primeiro vem as linhas(H) (Matriz).
     }

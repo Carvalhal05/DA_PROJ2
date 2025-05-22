@@ -30,18 +30,16 @@ namespace prog {
             int w_min = valor_min(w_img,w_max); //achar o menor valor.
             int h_min = valor_min(h_img,h_max); //achar o menor valor.
 
-            Image* result = new Image(w_min-X,h_min-Y); //A dimensão da nova imagem precisa ser o menor valor entre o "top-left corner" e a imagem original.
+            Image* resultado = new Image(w_min-X,h_min-Y); //A dimensão da nova imagem precisa ser o menor valor entre o "top-left corner" e a imagem original.
 
             //Primeiro vem as linhas
-            for (int y = Y; y < h_min; y++)//Acessa as linhas.
-            {
-                for (int x = X; x < w_min; x++)//Acessa as colunas de uma certa linha.
-                {
+            for (int y = Y; y < h_min; y++){//Acessa as linhas.
+                for (int x = X; x < w_min; x++){//Acessa as colunas de uma certa linha.
                     Color& pixel = img->at(x,y); //Pixel da posição (x,y) da imagem original
-                    result->at(x-X,y-Y) = pixel; //A posição do novo pixel é igual ao intervalo do "top-left' com o valor menor menos o "top-left" corner (dessa maneira a imagem é reduzida).
+                    resultado->at(x-X,y-Y) = pixel; //A posição do novo pixel é igual ao intervalo do "top-left' com o valor menor menos o "top-left" corner (dessa maneira a imagem é reduzida).
                 }
             }
-            return result; //Retorna a nova imagem.
+            return resultado; //Retorna a nova imagem.
         }
     }
 }

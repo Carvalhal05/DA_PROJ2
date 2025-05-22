@@ -16,16 +16,16 @@ namespace prog {
 
         Image* H_mirror::apply(Image* img) //img -> inicialização da Classe IMAGE.
         {
-            int w = img->width();
-            int h = img->height();
+            int width = img->width();
+            int height = img->height();
 
             //Primeiro vem as linhas.
-            for (int y = 0; y < h; y++)
+            for (int y = 0; y < height; y++)
             {
-                for (int x = 0; x < w/2; x++) //0 <= x < width()/2.
+                for (int x = 0; x < width/2; x++) //0 <= x < width()/2.
                 {
                     Color& pixel = img->at(x, y);//Pega o pixel da imagem na posição (x,y).
-                    Color& pixel_swap = img->at(w-1-x, y);//Pega o pixel da imagem na posição (w-1-x,y).
+                    Color& pixel_swap = img->at(width-1-x, y);//Pega o pixel da imagem na posição (w-1-x,y).
                     //Método clássico de troca
                     Color temp = pixel;
                     pixel = pixel_swap;

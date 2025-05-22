@@ -21,7 +21,7 @@ namespace prog {
             Image *apply(Image *img) override; //AQUI É FEITA A TRANSFORMAÇÃO DAS IMAGENS.
         private:
             std::string filename;
-            Color fill;
+            Color fill; //Conceito inspirado no command Blank.
             int X,Y;
         };
     }

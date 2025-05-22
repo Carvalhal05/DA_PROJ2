@@ -190,17 +190,19 @@ namespace prog {
             return new command::Scaleup(X, Y);
         }
 
-        /*if (command_name == "chain")
+        if (command_name == "chain")
         {
             string filename;
             input >> filename;
+            cout<<filename<<endl;
             while ( filename!="end")
             {
                 input >> filename;
+                cout<<filename<<endl;
             }
 
             return new command::Chain(filename);
-        }*/
+        }
 
         *Logger::err() << "Command not recognized: '" + command_name + "'\n";
         return nullptr;

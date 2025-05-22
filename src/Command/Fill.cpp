@@ -15,15 +15,13 @@ namespace prog {
 
         Image* Fill::apply(Image* img) //img -> Inicialização da Classe IMAGE.
         {
-            int W = img->width();
-            int H = img->height();
+            int Width = img->width();
+            int Height = img->height();
 
             //Primeiro vem as linhas.
-            for (int y = Y; y < Y+h; y++) //y <= y' < y + h
-            {
-                for (int x = X; x < X+w; x++) //x <= x' < x + w
-                {
-                    if (x >= 0 && x < W && y >= 0 && y < H) //Verifica se a imagem está dentro do  esperado (largura e altura).
+            for (int y = Y; y < Y+h; y++){ //y <= y' < y + h
+                for (int x = X; x < X+w; x++){ //x <= x' < x + w
+                    if (x >= 0 && x < Width && y >= 0 && y < Height) //Verifica se a imagem está dentro do  esperado (largura e altura).
                     {
                         Color& pixel = img->at(x, y);//Pega o pixel da imagem na posição (x,y).
                         pixel.red()= fill.red();

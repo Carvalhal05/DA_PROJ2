@@ -14,7 +14,7 @@ namespace prog
 {
     namespace command
     {
-        /*Chain::Chain(string filename,vector<string> stack) : Command(filename), stack(stack){}
+        Chain::Chain(string filename) : Command(filename){}
 
         Chain::~Chain() {}
 
@@ -24,25 +24,6 @@ namespace prog
             return img;
         }
 
-        Image* Chain::advanced(const string& file, Image* img, vector<string>& done)
-        {
-            ScrimParser parser;
-            for (auto string& filename : stack)
-            {
-                if (filename==file)
-                {
-
-                }else
-                {
-                    done.push_back(filename);
-                    Command* cmd = parser.parse_command("chain",filename);
-                }
-            }
-
-            done.push_back(file);*/
-
-
-        //}
 
 
     }

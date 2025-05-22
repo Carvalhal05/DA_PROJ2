@@ -11,8 +11,8 @@ namespace prog {
         {
         public:
 
-            Rotate_right(); // constructor.
-            ~Rotate_right(); // Destructor.
+            Rotate_right(); //Constructor.
+            ~Rotate_right(); //Destructor.
             Image *apply(Image *img) override; // AQUI É FEITA A TRANSFORMAÇÃO DAS IMAGENS.
         };
     }

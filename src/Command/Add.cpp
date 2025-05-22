@@ -21,18 +21,17 @@ namespace prog
         {
             Image* png = loadFromPNG(filename); //Conceito obtido através da classe Open.cpp.
             //Tamanho da imagem png.
-            int w_png = png->width();
-            int h_png = png->height();
+            int width_png = png->width();
+            int height_png = png->height();
             //Tamanho da nova imagem.
-            int w_img = img->width();
-            int h_img = img->height();
+            int widht_img = img->width();
+            int height_img = img->height();
 
             //Primeiro vem as linhas.
-
-            for (int y = 0; y < h_png; y++){//Acessa as linhas (Imagem original (png)).
-                for (int x = 0; x < w_png; x++){//Acessa as colunas de uma certa linha (Imagem original (png)).
+            for (int y = 0; y < height_png; y++){//Acessa as linhas (Imagem original (png)).
+                for (int x = 0; x < width_png; x++){//Acessa as colunas de uma certa linha (Imagem original (png)).
                     Color& pixel = png->at(x, y);//Pega o pixel da imagem png na posição (x,y).
-                    if (pixel.red() == fill.red() && pixel.green() == fill.green() && pixel.blue() == fill.blue()) // Verifica se a existencia de pixels com a "neutral color".
+                    if (pixel.red() == fill.red() && pixel.green() == fill.green() && pixel.blue() == fill.blue()) // Verifica se existe pixels com a "neutral color".
                     {
 
                     }else
@@ -40,7 +39,7 @@ namespace prog
                         //X e Y = (x,y) top-left corner
                         int w = X+x; //Distância do novo pixel (horizontal).
                         int h = Y+y; //Distância do novo pixel (vertical).
-                        if (w>=0 && w<w_img && h>=0 && h<h_img) //Verifica se o novo pixel está dentro dos limites.
+                        if (w>=0 && w<widht_img && h>=0 && h<height_img) //Verifica se o novo pixel está dentro dos limites.
                         {
                             img->at(w,h) = pixel; //Coloca no posiçao (w,h) a cor do pixel da imagem png na nova imagem img.
                         }

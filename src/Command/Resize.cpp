@@ -18,28 +18,24 @@ namespace prog {
             int w_img = img->width(); //Tamanho da largura da figura original.
             int h_img = img->height(); //Tamanho da altura da figura original.
 
-            Image* result = new Image(w,h); //Nova imagem.
-            Color& fill = img->at(0,0); //Fill color.
+            Image* resultado = new Image(w,h); //Nova imagem.
+            Color& fill = img->at(0,0); //Fill color da imagem img.
 
-            for (int y = 0;y < h; y++)//Percore toda a nova altura da imagem.
-            {
-                for (int x = 0; x < w; x++)//Percore toda a nova largura da imagem
-                {
+            //Primeiro vem a altura(linhas).
+            for (int y = 0;y < h; y++){//Percore toda a nova altura da imagem (linhas).
+                for (int x = 0; x < w; x++){//Percore toda a nova largura da imagem (colunas).
                     if (x+X>=X && y+Y>=Y && x+X<w_img && y+Y<h_img)//Verifica se o pixel(x+X,y+Y) pertence a dimensão da imagem original.
                     {
                         Color& pixel = img->at(x+X,y+Y); //Pega a cor do pixel(x+X,y+Y) da imagem original.
-                        result->at(x,y) = pixel; //Coloca no pixel(x,y) da nova imagem a cor da imagem original.
+                        resultado->at(x,y) = pixel; //Coloca no pixel(x,y) da nova imagem a cor da imagem original.
                         //Aqui não tem x+X e y+Y porque estamos colocando nos "pixels iniciais" da nova imagem.
                     }else
                     {
-                        result->at(x,y) = fill;//Caso o pixel(x+X,y+Y) não pertença a imagem original, o pixel(x,y) da nova imagem vai ser preenchido com a color fill.
+                        resultado->at(x,y) = fill;//Caso o pixel(x+X,y+Y) não pertença a imagem original, o pixel(x,y) da nova imagem vai ser preenchido com a color fill.
                     }
-
                 }
-
             }
-
-            return result;//Retorna a nova imagem.
+            return resultado;//Retorna a nova imagem.
         }
     }
 }

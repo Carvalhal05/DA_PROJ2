@@ -64,3 +64,14 @@
 74	1286	7694312699955939	CMakeFiles/tester.dir/src/Command/Chain.cpp.obj	9d002bebd289416
 1289	2453	7694312712107600	tester.exe	f8cae078ac1fbdc9
 7	74	7694313546370049	C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/cmake-build-debug/CMakeFiles/cmake.verify_globs	99c5b6d84be302d6
+6	49	7694315515291412	C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/cmake-build-debug/CMakeFiles/cmake.verify_globs	99c5b6d84be302d6
+56	945	7694315515804439	CMakeFiles/tester.dir/src/Command/Chain.cpp.obj	9d002bebd289416
+67	996	7694315515907998	CMakeFiles/tester.dir/src/ScrimParser.cpp.obj	d9ef2c365991e5f0
+10	121	7695616420296655	C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/cmake-build-debug/CMakeFiles/cmake.verify_globs	99c5b6d84be302d6
+126	624	7695616421475651	tester.exe	f8cae078ac1fbdc9
+3	37	7695619486145320	C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/cmake-build-debug/CMakeFiles/cmake.verify_globs	99c5b6d84be302d6
+3	31	7695624184654285	C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/cmake-build-debug/CMakeFiles/cmake.verify_globs	99c5b6d84be302d6
+111	3927	7695624185739927	CMakeFiles/tester.dir/src/Image.cpp.obj	d183e67685b74f6
+36	4093	7695624184990079	CMakeFiles/tester.dir/src/Command/Invert.cpp.obj	984b7b6c84ed1aa8
+93	4274	7695624185559891	CMakeFiles/tester.dir/src/Command/To_gray_scale.cpp.obj	fe4bd0200f580ddf
+5	37	7695624454565889	C:/Users/anacc/OneDrive/Portugal/Feup/2 ano/prog_project/project/cmake-build-debug/CMakeFiles/cmake.verify_globs	99c5b6d84be302d6

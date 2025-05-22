@@ -9,15 +9,14 @@ namespace prog {
     namespace command {
         class Chain : public Command
         {
-        /*public:
+        public:
 
-            Chain(string filenam,vector<string> stack);//Constructor.
+            Chain(string filenam);//Constructor.
             ~Chain();//Destructor.
             Image *apply(Image *img) override;//AQUI É FEITA A TRANSFORMAÇÃO DAS IMAGENS.
         private:
             string filename;
-            vector<string> stack;
-            Image* advanced(const string& file, Image* img, vector<string>& done);*/
+
         };
     }
 }

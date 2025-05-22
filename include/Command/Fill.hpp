@@ -21,7 +21,7 @@ namespace prog {
 
         private:
             int X,Y,w,h; //Ordem do input.
-            Color fill;
+            Color fill; //Conceito inspirado no command Blank.
         };
     }
 }
